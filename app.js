@@ -41,6 +41,19 @@ numbers.addEventListener("click",(e)=>{
     }}
     if(e.target.className==="fas fa-plus"|| e.target.className==="plus"){
         if(down.innerText ===""&&up.innerText===""){}
+        else if(up.innerText.includes("-")){
+            up.innerText=Number(up.innerText.split(" ")[0])-Number(down.innerText)+" +";
+            down.innerText="";
+        }
+        else if(up.innerText.includes("*")){
+            up.innerText=Number(up.innerText.split(" ")[0])*Number(down.innerText)+" +";
+            down.innerText="";
+        }
+        else if(up.innerText.includes("/")){
+            up.innerText=Number(up.innerText.split(" ")[0])/Number(down.innerText)+" /";
+            down.innerText="";
+        }
+        
         else if(!down.innerText==""&&up.innerText===""){
             up.innerText=down.innerText+" +";
             down.innerText=""
@@ -52,6 +65,18 @@ numbers.addEventListener("click",(e)=>{
         }}
         if(e.target.className==="fas fa-minus"|| e.target.className==="minus"){
             if(down.innerText ===""&&up.innerText===""){}
+            else if(up.innerText.includes("+")){
+                up.innerText=Number(up.innerText.split(" ")[0])+Number(down.innerText)+" -";
+                down.innerText="";
+            }
+            else if(up.innerText.includes("x")){
+                up.innerText=Number(up.innerText.split(" ")[0])*Number(down.innerText)+" -";
+                down.innerText="";
+            }
+            else if(up.innerText.includes("/")){
+                up.innerText=Number(up.innerText.split(" ")[0])/Number(down.innerText)+" -";
+                down.innerText="";
+            }
             else if(!down.innerText==""&&up.innerText===""){
                 up.innerText=down.innerText+" -";
                 down.innerText=""
@@ -63,6 +88,18 @@ numbers.addEventListener("click",(e)=>{
             }}
         if(e.target.className==="fas fa-times"|| e.target.className==="times"){
             if(down.innerText ===""&&up.innerText===""){}
+            else if(up.innerText.includes("-")){
+                up.innerText=Number(up.innerText.split(" ")[0])-Number(down.innerText)+" x";
+                down.innerText="";
+            }
+            else if(up.innerText.includes("x")){
+                up.innerText=Number(up.innerText.split(" ")[0])+Number(down.innerText)+" x";
+                down.innerText="";
+            }
+            else if(up.innerText.includes("/")){
+                up.innerText=Number(up.innerText.split(" ")[0])/Number(down.innerText)+" x";
+                down.innerText="";
+            }
             else if(!down.innerText==""&&up.innerText===""){
                 up.innerText=down.innerText+" x";
                 down.innerText=""
@@ -74,6 +111,18 @@ numbers.addEventListener("click",(e)=>{
             }}  
         if(e.target.className==="fas fa-divide"|| e.target.className==="divide"){
             if(down.innerText ===""&&up.innerText===""){}
+            else if(up.innerText.includes("-")){
+                up.innerText=Number(up.innerText.split(" ")[0])-Number(down.innerText)+" /";
+                down.innerText="";
+            }
+            else if(up.innerText.includes("x")){
+                up.innerText=Number(up.innerText.split(" ")[0])*Number(down.innerText)+" /";
+                down.innerText="";
+            }
+            else if(up.innerText.includes("+")){
+                up.innerText=Number(up.innerText.split(" ")[0])+Number(down.innerText)+" /";
+                down.innerText="";
+            }
             else if(!down.innerText==""&&up.innerText===""){
                 up.innerText=down.innerText+" /";
                 down.innerText=""
