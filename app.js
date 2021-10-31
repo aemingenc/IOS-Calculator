@@ -45,12 +45,12 @@ numbers.addEventListener("click",(e)=>{
             up.innerText=Number(up.innerText.split(" ")[0])-Number(down.innerText)+" +";
             down.innerText="";
         }
-        else if(up.innerText.includes("*")){
+        else if(up.innerText.includes("x")){
             up.innerText=Number(up.innerText.split(" ")[0])*Number(down.innerText)+" +";
             down.innerText="";
         }
         else if(up.innerText.includes("/")){
-            up.innerText=Number(up.innerText.split(" ")[0])/Number(down.innerText)+" /";
+            up.innerText=Number(up.innerText.split(" ")[0])/Number(down.innerText)+" +";
             down.innerText="";
         }
         
@@ -92,7 +92,7 @@ numbers.addEventListener("click",(e)=>{
                 up.innerText=Number(up.innerText.split(" ")[0])-Number(down.innerText)+" x";
                 down.innerText="";
             }
-            else if(up.innerText.includes("x")){
+            else if(up.innerText.includes("+")){
                 up.innerText=Number(up.innerText.split(" ")[0])+Number(down.innerText)+" x";
                 down.innerText="";
             }
